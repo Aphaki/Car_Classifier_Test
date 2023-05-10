@@ -34,6 +34,11 @@ struct ContentView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
+            } else {
+                Image(systemName: "photo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250, height: 250)
             }
             Spacer()
             if vm.title != "" {
@@ -41,6 +46,8 @@ struct ContentView: View {
                     Text(vm.confidence)
                     Text(vm.title)
                 }
+            } else {
+                Text("차 사진을 선택해주세요.")
             }
         }
         

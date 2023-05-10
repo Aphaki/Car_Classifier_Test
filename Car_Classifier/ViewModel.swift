@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
     
     func detect(ciImg: CIImage) {
         let config = MLModelConfiguration()
-        guard let model = try? MobileNetV2(configuration: config).model else {
+        guard let model = try? CarClassifier_8(configuration: config).model else {
             fatalError("CarClassifier8 가져오기 오류 발생")
         }
         guard let vnCoreModel = try? VNCoreMLModel(for: model) else {
@@ -30,12 +30,15 @@ class ViewModel: ObservableObject {
             let results = request.results as? [VNClassificationObservation]
             print("검색 결과: \(String(describing: results))")
             
-            guard let topResult = results?.first else {
-                fatalError("모스트 검색결과가 없습니다.")
+            if let topResult = results?.first {
+                self.confidence = "\(topResult.confidence.binade * 100)% "
+                self.title = topResult.identifier.capitalized
+            } else {
+                self.confidence = ""
+                self.title = "차 사진을 선택해주세요"
             }
-            self.confidence = "\(topResult.confidence.binade * 100)% "
-            self.title = topResult.identifier.capitalized
         }
+        
         
         let handler = VNImageRequestHandler(ciImage: ciImg)
         do {
