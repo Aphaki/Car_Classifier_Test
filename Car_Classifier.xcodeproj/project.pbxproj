@@ -13,6 +13,7 @@
 		7F73A2162A0B742B009355EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F73A2152A0B742B009355EA /* Preview Assets.xcassets */; };
 		7F73A21D2A0B745C009355EA /* CarClassifier_8.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7F73A21C2A0B745C009355EA /* CarClassifier_8.mlmodel */; };
 		7F73A21F2A0B83D0009355EA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F73A21E2A0B83D0009355EA /* ViewModel.swift */; };
+		7F73A2212A0B85D6009355EA /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7F73A2202A0B85D6009355EA /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7F73A2152A0B742B009355EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F73A21C2A0B745C009355EA /* CarClassifier_8.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CarClassifier_8.mlmodel; sourceTree = "<group>"; };
 		7F73A21E2A0B83D0009355EA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		7F73A2202A0B85D6009355EA /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		7F73A20D2A0B742A009355EA /* Car_Classifier */ = {
 			isa = PBXGroup;
 			children = (
+				7F73A2202A0B85D6009355EA /* MobileNetV2.mlmodel */,
 				7F73A21C2A0B745C009355EA /* CarClassifier_8.mlmodel */,
 				7F73A20E2A0B742A009355EA /* Car_ClassifierApp.swift */,
 				7F73A2102A0B742A009355EA /* ContentView.swift */,
@@ -146,6 +149,7 @@
 				7F73A2112A0B742A009355EA /* ContentView.swift in Sources */,
 				7F73A20F2A0B742A009355EA /* Car_ClassifierApp.swift in Sources */,
 				7F73A21F2A0B83D0009355EA /* ViewModel.swift in Sources */,
+				7F73A2212A0B85D6009355EA /* MobileNetV2.mlmodel in Sources */,
 				7F73A21D2A0B745C009355EA /* CarClassifier_8.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

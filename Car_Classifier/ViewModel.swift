@@ -19,7 +19,7 @@ class ViewModel: ObservableObject {
     
     func detect(ciImg: CIImage) {
         let config = MLModelConfiguration()
-        guard let model = try? CarClassifier_8(configuration: config).model else {
+        guard let model = try? MobileNetV2(configuration: config).model else {
             fatalError("CarClassifier8 가져오기 오류 발생")
         }
         guard let vnCoreModel = try? VNCoreMLModel(for: model) else {
